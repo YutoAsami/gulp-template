@@ -1,0 +1,42 @@
+@use '../Global/' as *;
+
+// row
+.l-stack {
+ display: flex;
+}
+
+[class^='l-stack'] > * {
+ margin: 0;
+}
+
+.l-stack > * + * {
+ margin-left: var(--s2);
+}
+
+.l-stack-large {
+ display: flex;
+}
+
+.l-stack-large > * {
+ margin: 0;
+}
+
+.l-stack-large > * + * {
+ margin-left: var(--s3);
+}
+
+
+// column
+.l-stack--column {
+ display: flex;
+ flex-direction: column;
+}
+
+
+.l-stack--column > * {
+ margin: 0;
+}
+
+.l-stack--column > * + * {
+ margin-top: var(--s3);
+}

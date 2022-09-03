@@ -1,0 +1,25 @@
+@use '../Global/' as *;
+
+.l-spacer--s {
+ height: var(--s2);
+
+ @include MQ('sm') {
+  height: 32px;
+ }
+}
+
+.l-spacer--m {
+ height: var(--s3);
+
+ @include MQ('sm') {
+  height: 40px;
+ }
+}
+
+.l-spacer--l {
+ height: var(--s4);
+
+ @include MQ('sm') {
+  height: 72px;
+ }
+}

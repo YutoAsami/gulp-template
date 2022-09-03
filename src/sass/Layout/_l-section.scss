@@ -1,0 +1,30 @@
+@use '../Global/' as *;
+
+.l-section__wrapper {
+ padding: var(--s4) 0;
+}
+
+.l-section--border {
+ border-top: 1px solid var(--gray);
+}
+
+.l-section__head {
+ flex-basis: 354px;
+ flex-grow: 1;
+}
+
+.l-section__body {
+ min-width: 50%;
+
+ flex-basis: 0;
+ flex-grow: 999;
+}
+
+.l-section__container {
+ flex-wrap: wrap;
+ gap: var(--s1);
+ align-items: flex-start;
+ & > * + * {
+  margin-left: 0;
+ }
+}

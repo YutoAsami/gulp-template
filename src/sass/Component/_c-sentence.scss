@@ -1,0 +1,37 @@
+@use '../Global/' as *;
+
+.c-sentence {
+ letter-spacing: .05em;
+ font-size: rem(16);
+ line-height: 2;
+
+ & > * + * {
+  margin-top: var(--s1);
+ }
+}
+
+.c-sentence--m {
+ font-weight: bold;
+ font-size: rem(18);
+ line-height: 2;
+
+ @include MQ(sm) {
+  font-size: rem(16);
+ }
+}
+
+.c-sentence--l {
+ font-size: rem(24);
+
+ @include MQ(sm) {
+  font-size: rem(16);
+ }
+}
+
+.c-sentence--heightBiggish {
+ line-height: 2;
+}
+
+.c-sentence__paragraph {
+ display: block;
+}

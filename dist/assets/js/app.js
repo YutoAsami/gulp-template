@@ -1,0 +1,1 @@
+"use strict";var sampleClass=function(s){console.log(s)},test=new sampleClass("hello");

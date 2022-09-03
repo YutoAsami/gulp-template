@@ -1,0 +1,146 @@
+@use '../Global/' as *;
+
+.l-footer {
+ @include font-default;
+}
+
+.l-footer__container {
+ padding: var(--s3) 0;
+ padding-bottom: var(--s1);
+}
+
+.l-footer__inner {
+ position: relative;
+
+ & > * + * {
+  margin-left: var(--s5);
+ }
+}
+
+.l-footer__button {
+ max-width: 840px;
+
+ flex: 1 1 840px;
+}
+
+.l-footer__buttonLink {
+ position: relative;
+ padding: var(--s3);
+ width: 100%;
+ height: 100%;
+ background-color: var(--gray);
+
+ justify-content: center;
+
+ & > * + * {
+  margin-top: 0;
+ }
+
+ &::before {
+  position: absolute;
+  top: 50%;
+  right: var(--s3);
+  overflow: hidden;
+  width: 36px;
+  height: 36px;
+  background-image: url(../images/linkArrow.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: '';
+  transform: translateY(-50%);
+  pointer-events: none;
+ }
+
+ &:hover {
+  &::before {
+   animation: arrowLink .6s cubic-bezier(.76, 0, .24, 1);
+  }
+ }
+}
+
+@keyframes arrowLink {
+ 0% {
+  background-position: center;
+ }
+ 13% {
+  background-position: 10px -10px;
+ }
+ 25% {
+  background-position: 36px -36px;
+ }
+ 50% {
+  background-position: -36px -36px;
+ }
+
+ 75% {
+  background-position: -36px 36px;
+ }
+
+ 100% {
+  background-position: center;
+ }
+}
+
+.l-footer__list {
+ font-weight: bold;
+
+ & > * + * {
+  margin-top: var(--s0);
+ }
+}
+
+.l-footer__listItemLink {
+ padding: calc(var(--s0) / 2);
+}
+
+.l-footer__buttonText {
+ display: block;
+ font-size: rem(24);
+}
+
+.l-footer__buttonText[lang='en'] {
+ font-weight: 900;
+ font-size: rem(54);
+}
+
+.l-footer__topButton {
+ position: absolute;
+ top: 0;
+ right: 0;
+ overflow: hidden;
+ width: 27px;
+ height: 163px;
+ img {
+  padding-bottom: var(--s1);
+  &:first-child {
+   animation: pageTopSlide01 8s -4s linear infinite;
+  }
+  &:last-child {
+   animation: pageTopSlide02 8s linear infinite;
+  }
+ }
+}
+
+@keyframes pageTopSlide01 {
+ from {
+  transform: translateY(100%);
+ }
+ to {
+  transform: translateY(-100%);
+ }
+}
+
+@keyframes pageTopSlide02 {
+ from {
+  transform: translateY(0);
+ }
+ to {
+  transform: translateY(-200%);
+ }
+}
+
+.l-footer__copy {
+ text-align: right;
+ font-size: rem(14);
+}

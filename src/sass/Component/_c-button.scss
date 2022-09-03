@@ -1,0 +1,21 @@
+@use '../Global/' as *;
+
+.c-button {
+ position: relative;
+ display: inline-flex;
+ padding: var(--s0) var(--s4);
+ border-radius: 4px;
+ color: #fff;
+ font-size: var(--font-size-smallish);
+ transition: all .3s cubic-bezier(.645, .045, .355, 1);
+
+ align-items: center;
+ justify-content: center;
+ @include MQ('sm') {
+  width: 100%;
+ }
+}
+
+.c-button__text {
+ font-weight: bold;
+}
